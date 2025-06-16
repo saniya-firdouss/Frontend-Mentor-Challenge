@@ -13,6 +13,12 @@ This is my solution to a Frontend Mentor challenge for building a simple, respon
 * CSS3 (Flexbox)
 * vanilla javacsript
 * Mobile-first workflow
+## About my project
+
+
+* Responsive
+* Without any framework
+* file 'style2css'  is for responsive to keep code clean
 
 ## 🙌 Thanks
 
