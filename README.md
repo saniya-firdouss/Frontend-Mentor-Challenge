@@ -5,7 +5,7 @@ This is my solution to a Frontend Mentor challenge for building a simple, respon
 
 ## 🚀 Live Site
 
-[View Live](https://your-live-site-link.com)
+[View Live](https://saniya-firdouss.github.io/Frontend-Mentor-Challenge/)
 
 ## 🔧 Built With
 
