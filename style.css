@@ -1,0 +1,401 @@
+@import url('https://fonts.googleapis.com/css2?family=Public+Sans:wght@300;400;700&display=swap');
+
+/* 2. CSS Variables for Colors and Fonts */
+:root {
+  /* Primary Colors */
+  --dark-blue: hsl(233, 26%, 24%);
+  --lime-green: hsl(136, 65%, 51%);
+  --bright-cyan: hsl(192, 70%, 51%);
+
+  /* Neutral Colors */
+  --grayish-blue: hsl(233, 8%, 62%);
+  --light-grayish-blue: hsl(220, 16%, 96%);
+  --very-light-gray: hsl(0, 0%, 98%);
+  --white: hsl(0, 0%, 100%);
+
+  /*button hover*/
+  --lime-green-light: hsl(136, 65%, 70%);
+  --bright-cyan-light: hsl(192, 70%, 70%);
+
+  /* Typography */
+  --font-family: 'Public Sans', sans-serif;
+  --font-size: 18px;
+  --font-weight-light: 300;
+  --font-weight-regular: 400;
+  --font-weight-bold: 700;
+
+}
+body {
+    margin: 0;
+    padding: 0;
+    background-color: var(--very-light-gray);
+    overflow-x: hidden;
+}
+
+main {
+    overflow-x: hidden;
+}
+
+/* HEADER CSS*/
+.header-content{
+    position: fixed;      /* stays stuck to the top */
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 4rem;
+    background: var(--white);
+    z-index: 999;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;   /* no “evenly” gaps */
+    padding-inline: 1rem;             /* safe, responsive edge space */
+  }
+  .logo img{
+    width: 12rem;       /* or max-width: 160px; */
+    height: auto;
+  }
+.navbar {
+    margin: 0;
+    padding: 0;
+    display: flex;
+    gap: 1.5rem;
+}
+.navbar ul {
+  margin: 0;
+    padding: 0;
+    display: flex;
+    gap: 1.5rem;
+}
+.navbar a {
+    color: var(--grayish-blue);
+    font-family: var(--font-family);
+    font-size: 15px;
+    font-weight: var(--font-weight-light);
+    text-decoration: none;
+    position: relative; /* Needed for the pseudo-element */
+}
+
+.navbar a::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: -23px; /* Distance from text */
+    width: 100%;
+    height: 3px; /* Thickness of the underline */
+    background-image: linear-gradient(to right, var(--lime-green), var(--bright-cyan));
+    transform: scaleX(0);
+    transform-origin: left;
+    transition: transform 0.3s ease;
+}
+
+.navbar a:hover::after {
+    transform: scaleX(1);
+}
+
+
+.nav-icon img{
+  display: none;
+  cursor: pointer;
+  width: 40px;
+  height: 40px;
+}
+.header-btn {
+    width: 8rem;
+    height: 2.3rem;
+    background: linear-gradient(to right, var(--lime-green), var(--bright-cyan));
+    color: var(--white);
+    border: none;
+    border-radius: 20px;
+    font-family: var(--font-family);
+    font-weight: var(--font-weight-regular);
+    font-size: 12px;
+    cursor: pointer;
+}
+.header-btn:hover {
+    background: linear-gradient(to right, var(--lime-green-light), var(--bright-cyan-light));
+
+}
+/*MAIN - hero section CSS-----------------*/
+.hero-section{
+    display: flex;
+    align-items: center;
+
+}
+.main-texts{
+    width: 23rem;
+    margin: 0 10rem;
+    
+}
+.main-heading{
+    font-family: var(--font-family);
+    font-weight: var(--font-weight-regular);
+    font-size: 3rem;
+    color: var(--dark-blue);
+}
+.main-subheading{
+        font-family: var(--font-family);
+        font-weight: var(--font-weight-regular);
+        font-size: 14px;
+        color: var(--grayish-blue);
+}
+.main-bg{
+    position: relative;
+    width: 50%;
+    height: 700px;
+    overflow:hidden;
+}
+.main-bg-img1{
+    position: absolute;
+    width: 880px;
+    bottom: 5rem;
+    right: -12rem; 
+    z-index: 1;   
+}
+.main-bg-img2{
+    position: absolute;
+    width: 620px;
+    bottom: 0rem;
+    right: -7rem;
+    z-index: 2;   
+}
+.main-btn {
+    width: 8rem;
+    height: 2.3rem;
+    background: linear-gradient(to right, var(--lime-green), var(--bright-cyan));
+    color: var(--white);
+    border: none;
+    border-radius: 20px;
+    font-family: var(--font-family);
+    font-weight: var(--font-weight-regular);
+    font-size: 12px;
+    cursor: pointer;
+}
+.main-btn:hover {
+    background: linear-gradient(to right, var(--lime-green-light), var(--bright-cyan-light));
+
+}
+/*SETION 2 CSS HERE------------*/
+.section2{
+    background-color: var(--light-grayish-blue);
+    width: 100%;
+    height: fit-content;
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    bottom: 8rem;
+}
+.main-texts2{
+   display: flex;
+   flex-direction: column;
+   max-width: 500px;
+   margin-left: 10rem;
+   margin-top: 7rem;
+}
+.main-heading2{
+    font-family: var(--font-family);
+    font-weight: var(--font-weight-regular);
+    font-size: 2.2rem;
+    color: var(--dark-blue);
+    margin: 0;
+}
+.main-subheading2{
+    font-family: var(--font-family);
+    font-weight: var(--font-weight-regular);
+    font-size: 14px;
+    color: var(--grayish-blue);
+}
+.why-us-content{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    flex-wrap: wrap;
+    gap: 1rem;
+    margin-top: 2rem;
+}
+.reason1, .reason2,
+ .reason3, .reason4{
+    width: 14rem;
+    height: 14rem;
+    padding: 1rem;
+ }
+.reason-icon{
+    width: 50px;
+    height: 50px;
+
+}
+.reason-title{
+    font-family: var(--font-family);
+    font-weight: var(--font-weight-regular);
+    font-size: 1.2rem;
+    color: var(--dark-blue);
+}
+.reason-des{
+    font-family: var(--font-family);
+    font-weight: var(--font-weight-regular);
+    font-size: 12px;
+    color: var(--grayish-blue);
+}
+/* SECTION 3 CSS HERE--------------------*/
+.section3{
+    top: -8rem;
+    position: relative;
+}
+.sec3-title{
+    font-family: var(--font-family);
+    font-weight: var(--font-weight-regular);
+    font-size: 2.2rem;
+    color: var(--dark-blue);
+    margin: 5rem 0rem 3rem 10rem;
+}
+.cards{
+    max-width: 100%;
+    display: flex;
+    justify-content: center;
+    flex-direction: row;
+    flex-wrap:wrap ;
+    gap: 2rem;
+}
+.card1{
+    display: flex;
+    flex-direction: column;
+}
+.card-img{
+    max-width: 14rem;
+    height: 11rem;
+    border-radius: 5px 5px 0 0;
+}
+.card-des{
+    display: flex;
+    flex-direction: column;
+    background-color: white;
+    max-width: 12rem;
+    text-align: left;
+    padding: 1rem;
+    border-radius: 0 0 5px 5px;
+
+}
+.writer{
+    font-family: var(--font-family);
+    font-weight: var(--font-weight-regular);
+    font-size: 8px;
+    color: var(--grayish-blue);
+    cursor: none;
+}
+.card-title{
+    font-family: var(--font-family);
+    font-weight: var(--font-weight-regular);
+    font-size: 14px;
+    color: var(--dark-blue);
+    margin: 0;
+    cursor: pointer;
+}
+.card-title:hover{
+    color: var(--bright-cyan);
+}
+.card-para{
+    font-family: var(--font-family);
+    font-weight: var(--font-weight-regular);
+    font-size: 12px;
+    color: var(--grayish-blue);
+    cursor: pointer;
+}
+
+/*FOOTER CONTENT-----------------------------------------------------*/
+.footer-content{
+    background-color: var(--dark-blue);
+    max-width: 100%;
+    height: fit-content;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+}
+.footer-logo{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin: 5rem;
+    align-items: center;
+    gap: 2rem;
+}
+.footer-logo img{
+    max-width: 12rem;
+}
+.socials{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.7rem;
+}
+.socials a svg {
+    color: var(--white);
+}
+.socials a svg:hover {
+    color: var(--bright-cyan);
+}
+.footer-menu, .footer-menu2{
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 1rem;
+    
+}
+.footer-menu a, .footer-menu2 a{
+    text-decoration: none;
+    color: var(--white);
+    font-family: var(--font-family);
+    font-weight: var(--font-weight-regular);
+    font-size: 13px;
+}
+.footer-menu a:hover{
+    color: var(--bright-cyan);
+}
+.footer-menu2 a:hover{
+    color: var(--bright-cyan);
+}
+.last-btn-txt{
+    
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+     
+}
+.footer-btn{
+    width: 8rem;
+    height: 2.3rem;
+    background: linear-gradient(to right, var(--lime-green), var(--bright-cyan));
+    color: var(--white);
+    border: none;
+    border-radius: 20px;
+    font-family: var(--font-family);
+    font-weight: var(--font-weight-regular);
+    font-size: 12px;
+    cursor: pointer;
+}
+.footer-btn:hover {
+    background: linear-gradient(to right, var(--lime-green-light), var(--bright-cyan-light));
+
+}
+.credit{
+    font-family: var(--font-family);
+    font-weight: var(--font-weight-light);
+    font-size: 8px;
+    color: var(--white);
+
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
